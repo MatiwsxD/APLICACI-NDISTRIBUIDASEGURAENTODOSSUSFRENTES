@@ -11,7 +11,7 @@ public class App {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         secure("keystores/ecikeystore.p12", "123456", "keystores/myTrustStore","123456");
         staticFileLocation("/static");
-        get("/consumir", (req, res) -> "{\"Date\": \""+dtf.format(LocalDateTime.now())+"\",\"Mensaje\": \"Has accedido correctamente\"}");
+        get("/consumir", (req, res) -> "{\"Date\": \""+dtf.format(LocalDateTime.now())+"\"}");
     }
 
     static int getPort() {
