@@ -16,7 +16,7 @@ public class App {
 
         Gson gson = new Gson();
         Map<String,String> users = new HashMap<>();
-        users.put("RichardUG", Hashing.sha256().hashString("123", StandardCharsets.UTF_8).toString());
+        users.put("MatiwsxD", Hashing.sha256().hashString("1234", StandardCharsets.UTF_8).toString());
         staticFileLocation("/static");
 
         get("/hello", (req, res) -> "Hello World");
