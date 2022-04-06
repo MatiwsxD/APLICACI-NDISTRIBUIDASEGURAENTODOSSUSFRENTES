@@ -1,5 +1,4 @@
 package edu.escuelaing.arep;
-
 import com.google.common.hash.Hashing;
 import com.google.gson.Gson;
 import org.json.JSONObject;
@@ -17,18 +16,18 @@ public class App {
 
         Gson gson = new Gson();
         Map<String,String> users = new HashMap<>();
-        users.put("MatiwsxD", Hashing.sha256().hashString("1234", StandardCharsets.UTF_8).toString());
+        users.put("RichardUG", Hashing.sha256().hashString("123", StandardCharsets.UTF_8).toString());
         staticFileLocation("/static");
 
         get("/hello", (req, res) -> "Hello World");
         get("/", (req,res) -> {
-            res.redirect("/login.html");
+            res.redirect("login.html");
 
             return "";
         });
         get("/loged", (req,res) -> {
             System.out.println("sssss");
-            res.redirect("static/loged.html");
+            res.redirect("loged.html");
             return "";
         });
         post("/login", (req,res) -> {
