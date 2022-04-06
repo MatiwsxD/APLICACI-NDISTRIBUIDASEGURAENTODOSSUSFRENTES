@@ -45,7 +45,7 @@ public class App {
         });
         get("/successful", (req,res) ->{
             System.out.println("https://"+((req.url().split("/")[2]).split(":")[0])+":4568/consumir");
-            String resp = URLReader.readURL("https://ec2-54-226-170-116.compute-1.amazonaws.com:4568/consumir");
+            String resp = URLReader.readURL("https://"+((req.url().split("/")[2]).split(":")[0])+":4568/consumir");
             System.out.println(resp);
             JSONObject jsonObject = new JSONObject(resp);
             return jsonObject;
